@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main
+  repo: DreamEmulator/parsimony.dev
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow
@@ -158,38 +159,22 @@ collections:
       - label: "Title"
         name: "title"
         widget: "string"
-      - label: "Publish Date"
-        name: "date"
-        widget: "datetime"
-        format: "YYYY-MM-DD"
-        dateFormat: "YYYY-MM-DD"
-        timeFormat: false
-      - label: Author
-        name: "author"
-        widget: relation
-        collection: "meta"
-        file: "authors"
-        searchFields:
-          - "authors.*.name"
-        displayFields:
-          - "authors.*.name"
-        valueField: "authors.*.slug"
-      - label: Tags
-        label_singular: "Tag"
-        name: "tags"
-        widget: list
-        summary: "{{fields.tag}}"
-        field:
-          label: Tag
-          name: tag
-          widget: relation
-          collection: "meta"
-          file: "tags"
-          searchFields:
-            - "tags.*.name"
-          displayFields:
-            - "tags.*.name"
-          valueField: "tags.*.slug"
       - label: "Body"
         name: "body"
         widget: "markdown"
+      - label: "Content"
+        name: "content"
+        widget: "object"
+        fields:
+            - label: "Steps"
+              name: "steps"
+              widget: "list"
+              summary: "{{fields.title}}"
+              fields:
+                - label: "Title"
+                  name: "title"
+                  widget: string
+                - label: "Body"
+                  name: "body"
+                  widget: string
+

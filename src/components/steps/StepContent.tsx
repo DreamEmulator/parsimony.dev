@@ -12,7 +12,8 @@ const StepContent = (props: BoxProps) => {
       mt="2"
       ps="8"
       pb="3"
-      fontSize="sm"
+      fontSize="lg"
+      fontWeight="400"
       {...props}
     />
   );

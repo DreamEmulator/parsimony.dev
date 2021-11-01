@@ -26,8 +26,6 @@ const ContentParser: React.FC<Props> = ({ contentGroups }) => {
     //Render
     const render = (group: ContentGroup) => {
       switch (group.GROUP_TYPE) {
-        case CONTENTGROUPS.STEPS:
-          return <StepsGroup {...group} />;
         case CONTENTGROUPS.CTA_CARDS:
           return <CTACardGroup {...group} />;
         case CONTENTGROUPS.SQUARE_IMAGES:

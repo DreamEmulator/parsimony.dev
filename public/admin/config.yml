@@ -145,36 +145,25 @@ collections:
 
   - name: "pages"
     label: "Pages"
-    folder: "content/pages/"
-    extension: "mdx"
-    format: "frontmatter"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: slug
-    summary: "{{title}}"
-    fields:
-      - label: "Slug"
-        name: "slug"
-        widget: "string"
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
-      - label: "Content"
-        name: "content"
-        widget: "object"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "site/content/home.yml"
         fields:
-            - label: "Steps"
-              name: "steps"
-              widget: "list"
-              summary: "{{fields.title}}"
-              fields:
-                - label: "Title"
-                  name: "title"
-                  widget: string
-                - label: "Body"
-                  name: "body"
-                  widget: string
-
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+          - label: "Steps"
+            name: "steps"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: string
+              - label: "Body"
+                name: "body"
+                widget: string

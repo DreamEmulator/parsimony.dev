@@ -1,9 +1,19 @@
 title: Home
 body: Welcome to Parsimony Dev
+subtitle: How we roll
 steps:
-  - title: Intake
-    body: Get to know
+  - title: Discover
+    body: What are your goals and when do you want to reach them?
   - title: Define
-    body: User stories and sprints
-  - title: Hand over
-    body: Code is good an documented
+    body: What needs to be done to reach your goals?
+  - title: Design
+    body: A modular system of reusable components is created that form the basis for
+      fast and agile development.
+  - title: Develop
+    body: The digital solution is developed following user stories parsed into
+      sprints of two weeks.
+  - title: Document
+    body: The product is documented, so the components and code are easily reusable
+      for you and your team.
+  - title: Done
+    body: Development is done and your product is ready

@@ -14,14 +14,18 @@ import StepContent from "../../components/steps/StepContent";
 import { UserProfile } from "../../components/images/UserProfile";
 import { ContentBlock, ContentGroup } from "../../utils/types/content";
 import useSteps from "../../utils/hooks/useSteps";
+import { StepType } from "../../lib/pages";
 
-const StepsGroup: React.FC<ContentGroup> = ({ contentBlocks }) => {
+type Props = {
+  steps: StepType[];
+};
+const StepsGroup: React.FC<Props> = ({ steps }) => {
   const { nextStep, prevStep, reset, activeStep } = useSteps({
     initialStep: 0,
   });
 
   const renderStep = (
-    { title, body }: ContentBlock,
+    { title, body }: StepType,
     isFirst: boolean,
     isLast: boolean
   ) =>
@@ -51,13 +55,13 @@ const StepsGroup: React.FC<ContentGroup> = ({ contentBlocks }) => {
   return (
     <Box py="10" px={{ base: "6", md: "8" }} minH="400px">
       <Steps activeStep={activeStep}>
-        {contentBlocks.map(
+        {steps.map(
           (step, index) =>
             step !== null &&
-            renderStep(step, index === 0, index === contentBlocks.length - 1)
+            renderStep(step, index === 0, index === steps.length - 1)
         )}
       </Steps>
-      <Stack display={activeStep === contentBlocks.length ? "flex" : "none"}>
+      <Stack display={activeStep === steps.length ? "flex" : "none"}>
         <UserProfile
           name="Sebastiaan Hols"
           image="https://media-exp1.licdn.com/dms/image/C5603AQFBkup1Vmpgdw/profile-displayphoto-shrink_400_400/0/1584641650431?e=1639612800&v=beta&t=fpsXE-yero-QY2nepLFnI1QWAAkRuJ_TFkT6DpoHkrY"

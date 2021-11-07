@@ -146,24 +146,119 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - label: "Home"
-        name: "home"
+      - name: home
+        label: "Home"
         file: "site/content/home.yml"
         fields:
-          - label: "Title"
-            name: "title"
-            widget: "string"
-          - label: "Subtitle"
-            name: "subtitle"
-            widget: "markdown"
-          - label: "Steps"
-            name: "steps"
-            widget: "list"
-            summary: "{{fields.title}}"
+          - name: Banner
+            widget: object
+            summary: "{{fields.slogan}} - {{fields.pitch}}"
             fields:
-              - label: "Title"
-                name: "title"
+            - name: Slogan
+              widget: string
+              required: false
+            - name: Pitch
+              widget: string
+              required: false
+            - name: Link
+              widget: object
+              fields:
+              - name: Title
                 widget: string
-              - label: "Body"
-                name: "body"
+                required: false
+              - name: URL
                 widget: string
+                required: false
+          - name: Values
+            widget: object
+            fields:
+              - name: What
+                widget: object
+                fields:
+                  - name: Title
+                    widget: string
+                    required: false
+                  - name: Body
+                    widget: string
+                    required: false
+                  - name: Link
+                    widget: object
+                    fields:
+                      - name: Title
+                        widget: string
+                        required: false
+                      - name: URL
+                        widget: string
+                        required: false
+              - name: Why
+                widget: object
+                fields:
+                  - name: Title
+                    widget: string
+                    required: false
+                  - name: Body
+                    widget: string
+                    required: false
+                  - name: Link
+                    widget: object
+                    fields:
+                      - name: Title
+                        widget: string
+                        required: false
+                      - name: URL
+                        widget: string
+                        required: false
+              - name: How
+                widget: object
+                fields:
+                  - name: Title
+                    widget: string
+                    required: false
+                  - name: Body
+                    widget: string
+                    required: false
+                  - name: Link
+                    widget: object
+                    fields:
+                      - name: Title
+                        widget: string
+                        required: false
+                      - name: URL
+                        widget: string
+                        required: false
+          - name: Definition
+            widget: object
+            fields:
+              - name: Word
+                widget: string
+                required: false
+              - name: Definition
+                widget: string
+                required: false
+          - name: Steps
+            widget: list
+            summary: "{{fields.title}}"
+            label_singular: Step
+            fields:
+              - name: Title
+                widget: string
+              - name: Body
+                widget: string
+          - name: Toolbox
+            widget: list
+            summary: "{{fields.title}}"
+            label_singular: Tool
+            fields:
+              - name: Title
+                widget: string
+              - name: Body
+                widget: string
+              - name: Link
+                widget: object
+                fields:
+                - name: Title
+                  widget: string
+                  required: false
+                - name: URL
+                  widget: string
+                  required: false

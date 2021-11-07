@@ -17,8 +17,8 @@ type Props = {
 const Index: React.FC<Props> = ({ data: { title, subtitle, steps } }) => {
   return (
     <>
-      <PageTitle title={title} subtitle={subtitle} />
-      <StepsGroup steps={steps} />
+      {title && subtitle && <PageTitle title={title} subtitle={subtitle} />}
+      {steps && <StepsGroup steps={steps} />}
     </>
   );
 };

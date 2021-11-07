@@ -143,6 +143,28 @@ collections:
         name: "body"
         widget: "markdown"
 
+  - label: Toolbox
+    name: Toolbox
+    folder: "content/tools/"
+    extension: "mdx"
+    format: "frontmatter"
+    summary: "{{tool}}"
+    create: true
+    label_singular: Tool
+    fields:
+      - name: Title
+        widget: string
+      - name: Body
+        widget: string
+      - name: Link
+        widget: object
+        fields:
+          - name: Title
+            widget: string
+            required: false
+          - name: URL
+            widget: string
+            required: false
   - name: "pages"
     label: "Pages"
     files:
@@ -244,21 +266,3 @@ collections:
                 widget: string
               - name: Body
                 widget: string
-          - name: Toolbox
-            widget: list
-            summary: "{{fields.title}}"
-            label_singular: Tool
-            fields:
-              - name: Title
-                widget: string
-              - name: Body
-                widget: string
-              - name: Link
-                widget: object
-                fields:
-                - name: Title
-                  widget: string
-                  required: false
-                - name: URL
-                  widget: string
-                  required: false

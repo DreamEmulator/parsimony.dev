@@ -23,3 +23,5 @@ steps:
   - title: Deliver
     body: The product is documented, so the components and code are easily reusable
       for you and your team.
+Banner:
+  Slogan: Scale up your stacks

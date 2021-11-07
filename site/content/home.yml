@@ -1,18 +1,25 @@
 title: Home
 subtitle: How we roll
+banner:
+  slogan: Scale up your stacks
+  pitch: Take your digital product to the next level
+  link:
+    title: Services
+    url: /services
+values:
+  why:
+    title: Less is more
+    body: Keeping your code lean and your setup decoupled can greatly increase your
+      development speed.
 steps:
   - title: Discover
     body: What are your goals and when do you want to reach them?
-  - title: Define
-    body: What needs to be done to reach your goals?
   - title: Design
     body: A modular system of reusable components is created that form the basis for
       fast and agile development.
   - title: Develop
     body: The digital solution is developed following user stories parsed into
       sprints of two weeks.
-  - title: Document
+  - title: Deliver
     body: The product is documented, so the components and code are easily reusable
       for you and your team.
-  - title: Deliver
-    body: Development is done and your product is ready

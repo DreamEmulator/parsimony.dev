@@ -1,16 +1,27 @@
-title: Home
-subtitle: How we roll
-banner:
-  slogan: Scale up your stacks
-  pitch: Take your digital product to the next level
-  link:
-    title: Services
-    url: /services
 values:
   why:
     title: Less is more
     body: Keeping your code lean and your setup decoupled can greatly increase your
       development speed.
+Values:
+  What:
+    Title: ""
+  Why:
+    Title: Less is more
+    Body: Keeping your code lean and your setup decoupled can greatly increase your
+      development speed.
+Steps:
+  - Title: Discover
+    Body: Dive in and discover what the stack is and how to leverage existing
+      efforts to set up next level solutions.
+  - Body: A modular system of reusable components is created that form the basis for
+      fast and agile development.
+    Title: Design
+  - Title: Develop
+    Body: Solutions from visual component systems to serverless stacks.
+  - Title: Deliver
+    Body: The product is documented, so the components and code are easily reusable
+      for you and your team.
 steps:
   - title: Discover
     body: What are your goals and when do you want to reach them?
@@ -23,5 +34,17 @@ steps:
   - title: Deliver
     body: The product is documented, so the components and code are easily reusable
       for you and your team.
+banner:
+  slogan: Scale up your stacks
+  pitch: Take your digital product to the next level
+  link:
+    title: Services
+    url: /services
 Banner:
   Slogan: Scale up your stacks
+  Pitch: Scale up your start up with (c)lean web and app solutions
+Toolbox:
+  - Title: React
+    Body: Smart and simple component driven development
+subtitle: How we roll
+title: Home

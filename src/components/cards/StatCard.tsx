@@ -6,6 +6,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import * as React from "react";
+import useLogoColors from "../../utils/hooks/useLogo";
 
 interface StatCardProps extends FlexProps {
   title: string;
@@ -15,6 +16,7 @@ interface StatCardProps extends FlexProps {
 
 export const StatCard = (props: StatCardProps) => {
   const { value, title, icon } = props;
+  const { textColor } = useLogoColors();
   return (
     <Flex
       bg={useColorModeValue("blue.50", "blue.300")}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Icon } from "@chakra-ui/react";
+import { Button, Icon, useColorModeValue } from "@chakra-ui/react";
 import { ImSun } from "react-icons/im";
 import { IoMdMoon } from "react-icons/io";
 import { useColorMode } from "@chakra-ui/color-mode";
@@ -9,15 +9,15 @@ interface Props {}
 const ColorModeButton: React.FC<Props> = ({}) => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Button
+    <Icon
+      borderWidth={1}
+      p={2}
+      borderRadius={100}
       onClick={toggleColorMode}
-      size="sm"
-      colorScheme="brand"
-      my={4}
-      mx={2}
-    >
-      <Icon as={colorMode === "dark" ? ImSun : IoMdMoon} />
-    </Button>
+      fontSize="2em"
+      as={colorMode === "dark" ? ImSun : IoMdMoon}
+      fill={useColorModeValue("teal.400", "blue.200")}
+    />
   );
 };
 

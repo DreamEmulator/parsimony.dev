@@ -5,6 +5,7 @@ import React from "react";
 import { Text, Box } from "@chakra-ui/react";
 import StepsGroup from "../content/groups/StepsGroup";
 import { Home } from "../utils/types/content/home";
+import { HeroBanner } from "../components/images/HeroBanner";
 
 type Props = {
   data: Home;
@@ -21,7 +22,7 @@ const Index: React.FC<Props> = ({
   console.log(data);
   return (
     <>
-      {Slogan && Pitch && <PageTitle title={Slogan} subtitle={Pitch} />}
+      {Slogan && Pitch && <HeroBanner Pitch={Pitch} Slogan={Slogan} />}
       {Steps && <StepsGroup steps={Steps} />}
     </>
   );

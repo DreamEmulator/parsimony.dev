@@ -5,13 +5,13 @@ import { AppProps } from "next/app";
 import "../../public/styles/global.css";
 import StyleProvider from "../providers/StyleProvider";
 import Layout from "../components/app/Layout";
+import Navigation from "../components/app/Navigation";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <StyleProvider>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Navigation />
+      <Component {...pageProps} />
     </StyleProvider>
   );
 }

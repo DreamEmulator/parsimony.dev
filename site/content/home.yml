@@ -21,7 +21,7 @@ Steps:
   - Title: Discover
     Body: Figure out which features you want to enhance your app with.
   - Title: Define
-    Body: Write down the user stories to be delivered in sprints.
+    Body: Define testable the user stories that can be solved in sprints.
   - Title: Develop
     Body: Test driven development is used to create maintainable features that take
       your product to the next level.

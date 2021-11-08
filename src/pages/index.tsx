@@ -21,14 +21,13 @@ const Index: React.FC<Props> = ({
     Steps,
     ...rest
   },
+  data,
 }) => {
+  console.log(data);
   return (
     <>
       {Slogan && Pitch && <PageTitle title={Slogan} subtitle={Pitch} />}
       {Steps && <StepsGroup steps={Steps} />}
-      <Box>
-        <Text>{JSON.stringify(rest)}</Text>
-      </Box>
     </>
   );
 };
@@ -37,7 +36,6 @@ export default Index;
 
 export async function getStaticProps(context: NextPageContext) {
   const data = getHomeData();
-  console.log(JSON.stringify(data));
   return {
     props: { data },
   };

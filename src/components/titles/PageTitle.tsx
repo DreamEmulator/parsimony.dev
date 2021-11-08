@@ -33,7 +33,7 @@ const PageTitle: React.FC<Props> = ({ title, subtitle, icon, center }) => {
           <Text
             bgGradient={textColor}
             bgClip="text"
-            fontSize={{ base: "4xl", md: "7xl" }}
+            fontSize={{ base: "4xl", md: "5xl" }}
             fontWeight="light"
           >
             {title}
@@ -46,8 +46,8 @@ const PageTitle: React.FC<Props> = ({ title, subtitle, icon, center }) => {
               bgGradient={textColor}
               bgClip="text"
               mt="2"
-              fontSize={{ base: "lg", md: "xl" }}
-              fontWeight="regular"
+              fontSize={{ base: "xl", md: "2xl" }}
+              fontWeight="light"
             >
               {subtitle}
             </Text>

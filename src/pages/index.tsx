@@ -1,11 +1,10 @@
-import PageTitle from "../components/titles/PageTitle";
 import { getHomeData } from "../lib/pages";
 import { NextPageContext } from "next";
 import React from "react";
-import { Text, Box } from "@chakra-ui/react";
 import StepsGroup from "../content/groups/StepsGroup";
 import { Home } from "../utils/types/content/home";
 import { HeroBanner } from "../components/images/HeroBanner";
+import DefinitionTitle from "../components/titles/DefinitionTitle";
 
 type Props = {
   data: Home;
@@ -15,7 +14,7 @@ const Index: React.FC<Props> = ({
   data: {
     Banner: { Pitch, Slogan },
     Steps,
-    ...rest
+    Definition: { Word, Definition },
   },
   data,
 }) => {
@@ -23,6 +22,9 @@ const Index: React.FC<Props> = ({
   return (
     <>
       {Slogan && Pitch && <HeroBanner Pitch={Pitch} Slogan={Slogan} />}
+      {Word && Definition && (
+        <DefinitionTitle Word={Word} Definition={Definition} />
+      )}
       {Steps && <StepsGroup steps={Steps} />}
     </>
   );

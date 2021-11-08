@@ -7,6 +7,7 @@ import {
   Stack,
   Text,
   VStack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Steps from "../../components/steps/Steps";
 import Step from "../../components/steps/Step";
@@ -52,7 +53,12 @@ const StepsGroup: React.FC<Props> = ({ steps }) => {
       </Step>
     );
   return (
-    <Box py="10" px={{ base: "6", md: "8" }} minH="400px">
+    <Box
+      py="10"
+      px={{ base: "6", md: "8" }}
+      minH="400px"
+      background={useColorModeValue("brand.50", "brand.900")}
+    >
       <Steps activeStep={activeStep}>
         {steps.map(
           (step, index) =>

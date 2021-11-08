@@ -1,3 +1,30 @@
 Banner:
-  Slogan: (c)lean web & app's
-  Pitch: Scale up your stacks
+  Slogan: Scale up your stacks
+  Pitch: Developing custom components for native and hybrid apps.
+Values:
+  What:
+    Title: Creativity
+    Body: Discovering, defining and delivering the best components and code drives
+      our creativity.
+  Why:
+    Title: Passion
+    Body: Crafting clean code that lasts is a passion we all share at parsimony.
+  How:
+    Body: Developing in tandem with a team or delivering a single product from start
+      to finish.
+    Title: Dedication
+Definition:
+  Word: Parsimony
+  Definition: The scientific principle that things should be connected and behave
+    in the simplest and most
+Steps:
+  - Title: Discover
+    Body: Figure out which features you want to enhance your app with.
+  - Title: Define
+    Body: Write down the user stories to be delivered in sprints.
+  - Title: Develop
+    Body: Test driven development is used to create maintainable features that take
+      your product to the next level.
+  - Title: Deliver
+    Body: Your team can take over. The code is tried and tested, well documented and
+      easily extendable.

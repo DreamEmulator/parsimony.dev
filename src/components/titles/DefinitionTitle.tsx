@@ -15,18 +15,19 @@ const DefinitionTitle: React.FC<DefinitionProps> = ({ Word, Definition }) => {
       textAlign="center"
       mx="auto"
       justifyContent="center"
-      py={{ base: 8, md: 16 }}
+      py={{ base: 8, sm: 20 }}
       background={useColorModeValue("brand.50", "brand.900")}
     >
       <Heading
         fontSize={{ base: "3xl", sm: "5xl" }}
         fontWeight="thin"
         fontStyle="italic"
+        color={useColorModeValue("brand.800", "whiteAlpha.700")}
       >
         {Word}
       </Heading>
       <Text
-        color={useColorModeValue("gray.600", "whiteAlpha.700")}
+        color={useColorModeValue("brand.600", "whiteAlpha.700")}
         fontWeight="medium"
         mt="4"
         fontFamily="mono"

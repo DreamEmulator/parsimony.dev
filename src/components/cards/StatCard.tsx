@@ -23,10 +23,12 @@ export const StatCard = (props: StatCardProps) => {
       {...props}
     >
       <Box flex="1" mr="4" color={useColorModeValue("blue.500", "inherit")}>
-        <Text fontSize="5xl" fontWeight="extrabold" mb="4" lineHeight="1">
+        <Text fontSize="xl" fontWeight="extrabold" mb="4" lineHeight="1">
           {value}
         </Text>
-        <Text color={useColorModeValue("gray.900", "white")}>{title}</Text>
+        <Text fontFamily="mono" color={useColorModeValue("gray.900", "white")}>
+          {title}
+        </Text>
       </Box>
       <Box fontSize="3rem" color={useColorModeValue("blue.100", "blue.500")}>
         {icon}

@@ -5,6 +5,7 @@ import StepsGroup from "../content/groups/StepsGroup";
 import { Home } from "../utils/types/content/home";
 import { HeroBanner } from "../components/images/HeroBanner";
 import DefinitionTitle from "../components/titles/DefinitionTitle";
+import { StatCardsGroup } from "../components/cards/StatCardsGroup";
 
 type Props = {
   data: Home;
@@ -15,6 +16,7 @@ const Index: React.FC<Props> = ({
     Banner: { Pitch, Slogan },
     Steps,
     Definition: { Word, Definition },
+    Values,
   },
   data,
 }) => {
@@ -25,6 +27,7 @@ const Index: React.FC<Props> = ({
       {Word && Definition && (
         <DefinitionTitle Word={Word} Definition={Definition} />
       )}
+      {Values && <StatCardsGroup {...Values} />}
       {Steps && <StepsGroup steps={Steps} />}
     </>
   );

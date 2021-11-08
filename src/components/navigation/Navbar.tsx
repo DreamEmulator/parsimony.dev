@@ -42,7 +42,7 @@ export const Template: React.FC = (props) => {
           />
         </Tabs>
       </HStack>
-      <Spacer />
+      <Spacer flex={{ base: 0.95, lg: 0.8 }} />
       <HStack display={{ base: "none", md: "flex" }} spacing={3}>
         {children.find((child) => child.type === UserProfile)?.props.children}
       </HStack>

@@ -6,12 +6,14 @@ import "../../public/styles/global.css";
 import StyleProvider from "../providers/StyleProvider";
 import Layout from "../components/app/Layout";
 import Navigation from "../components/app/Navigation";
+import Footer from "../components/app/Footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <StyleProvider>
       <Navigation />
       <Component {...pageProps} />
+      <Footer />
     </StyleProvider>
   );
 }

@@ -8,6 +8,7 @@ import {
   Text,
   VStack,
   useColorModeValue,
+  Heading,
 } from "@chakra-ui/react";
 import Steps from "../../components/steps/Steps";
 import Step from "../../components/steps/Step";
@@ -59,6 +60,15 @@ const StepsGroup: React.FC<Props> = ({ steps }) => {
       minH="400px"
       background={useColorModeValue("brand.50", "brand.900")}
     >
+      <Heading
+        as="h3"
+        size="2xl"
+        py="8"
+        fontFamily="mono"
+        color={useColorModeValue("gray.200", "whiteAlpha.400")}
+      >
+        Strategy
+      </Heading>
       <Steps activeStep={activeStep}>
         {steps.map(
           (step, index) =>

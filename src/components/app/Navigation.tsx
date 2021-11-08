@@ -25,11 +25,13 @@ const Navigation: React.FC<Props> = ({}) => {
         </Navbar.Links>
         <Navbar.UserProfile>
           <ColorModeButton />
-          <UserProfile
-            name="Sebastiaan Hols"
-            image="https://media-exp1.licdn.com/dms/image/C5603AQFBkup1Vmpgdw/profile-displayphoto-shrink_400_400/0/1584641650431?e=1639612800&v=beta&t=fpsXE-yero-QY2nepLFnI1QWAAkRuJ_TFkT6DpoHkrY"
-            email="s.hols@icloud.com"
-          />
+          <Box display={{ base: "none", lg: "flex" }}>
+            <UserProfile
+              name="Sebastiaan Hols"
+              image="https://media-exp1.licdn.com/dms/image/C5603AQFBkup1Vmpgdw/profile-displayphoto-shrink_400_400/0/1584641650431?e=1639612800&v=beta&t=fpsXE-yero-QY2nepLFnI1QWAAkRuJ_TFkT6DpoHkrY"
+              email="s.hols@icloud.com"
+            />
+          </Box>
         </Navbar.UserProfile>
       </Navbar>
     </Box>

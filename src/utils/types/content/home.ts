@@ -9,11 +9,30 @@
 
 export interface Home {
   Banner: Banner;
+  Values: Values;
+  Definition: Definition;
+  Steps: Step[];
 }
 
 export interface Banner {
   Slogan: string;
   Pitch: string;
+}
+
+export interface Definition {
+  Word: string;
+  Definition: string;
+}
+
+export interface Step {
+  Title: string;
+  Body: string;
+}
+
+export interface Values {
+  What: Step;
+  Why: Step;
+  How: Step;
 }
 
 // Converts JSON strings to/from your types
@@ -176,11 +195,41 @@ function r(name: string) {
 }
 
 const typeMap: any = {
-  Home: o([{ json: "Banner", js: "Banner", typ: r("Banner") }], false),
+  Home: o(
+    [
+      { json: "Banner", js: "Banner", typ: r("Banner") },
+      { json: "Values", js: "Values", typ: r("Values") },
+      { json: "Definition", js: "Definition", typ: r("Definition") },
+      { json: "Steps", js: "Steps", typ: a(r("Step")) },
+    ],
+    false
+  ),
   Banner: o(
     [
       { json: "Slogan", js: "Slogan", typ: "" },
       { json: "Pitch", js: "Pitch", typ: "" },
+    ],
+    false
+  ),
+  Definition: o(
+    [
+      { json: "Word", js: "Word", typ: "" },
+      { json: "Definition", js: "Definition", typ: "" },
+    ],
+    false
+  ),
+  Step: o(
+    [
+      { json: "Title", js: "Title", typ: "" },
+      { json: "Body", js: "Body", typ: "" },
+    ],
+    false
+  ),
+  Values: o(
+    [
+      { json: "What", js: "What", typ: r("Step") },
+      { json: "Why", js: "Why", typ: r("Step") },
+      { json: "How", js: "How", typ: r("Step") },
     ],
     false
   ),

@@ -4,12 +4,12 @@ import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { SocialList } from "../components/SocialList";
 import PageTitle from "../components/titles/PageTitle";
-import { getHomeData, HomeType } from "../lib/pages";
+import { getHomeData } from "../lib/pages";
 import { NextPageContext } from "next";
 import React from "react";
-import { Text } from "@chakra-ui/react";
+import { Text, Box } from "@chakra-ui/react";
 import StepsGroup from "../content/groups/StepsGroup";
-import { Home } from "../utils/types/home";
+import { Home } from "../utils/types/content/home";
 
 type Props = {
   data: Home;
@@ -18,12 +18,17 @@ type Props = {
 const Index: React.FC<Props> = ({
   data: {
     Banner: { Pitch, Slogan },
+    Steps,
+    ...rest
   },
 }) => {
   return (
     <>
       {Slogan && Pitch && <PageTitle title={Slogan} subtitle={Pitch} />}
-      {/*{steps && <StepsGroup steps={steps} />}*/}
+      {Steps && <StepsGroup steps={Steps} />}
+      <Box>
+        <Text>{JSON.stringify(rest)}</Text>
+      </Box>
     </>
   );
 };

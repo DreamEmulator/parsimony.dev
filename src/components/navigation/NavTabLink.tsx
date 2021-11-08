@@ -19,11 +19,9 @@ export const NavTabLink: React.FC<LinkProps> = (props) => {
         display="block"
         fontWeight="medium"
         lineHeight="1.25rem"
-        color="inherit"
-        _hover={{ color: mode("blue.600", "blue.200") }}
-        _activeLink={{
-          color: mode("blue.600", "blue.200"),
-        }}
+        color="brand.400"
+        _hover={{ color: mode("brand.500", "brand.300") }}
+        _activeLink={{ color: "brand.800" }}
         {...props}
       />
     </Tab>

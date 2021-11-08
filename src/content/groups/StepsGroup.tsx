@@ -10,11 +10,10 @@ import {
 } from "@chakra-ui/react";
 import Steps from "../../components/steps/Steps";
 import Step from "../../components/steps/Step";
+import { Step as StepType } from "../../../src/utils/types/content/home";
 import StepContent from "../../components/steps/StepContent";
 import { UserProfile } from "../../components/images/UserProfile";
-import { ContentBlock, ContentGroup } from "../../utils/types/content";
 import useSteps from "../../utils/hooks/useSteps";
-import { StepType } from "../../lib/pages";
 
 type Props = {
   steps: StepType[];
@@ -25,16 +24,16 @@ const StepsGroup: React.FC<Props> = ({ steps }) => {
   });
 
   const renderStep = (
-    { title, body }: StepType,
+    { Title, Body }: StepType,
     isFirst: boolean,
     isLast: boolean
   ) =>
-    title &&
-    body && (
-      <Step key={title} title={title}>
+    Title &&
+    Body && (
+      <Step key={Title} title={Title}>
         <StepContent>
           <Stack shouldWrapChildren spacing="4">
-            <Text>{body}</Text>
+            <Text>{Body}</Text>
             <HStack>
               <Button
                 size="sm"

@@ -30,7 +30,7 @@ export const Template: React.FC = (props) => {
     >
       {children.find((child) => child.type === Brand)?.props.children}
       <HStack display={{ base: "none", md: "flex" }} marginStart={4}>
-        <Tabs colorScheme="blue" variant="unstyled" isFitted>
+        <Tabs colorScheme="brand" variant="unstyled" isFitted>
           <TabList>
             {children.find((child) => child.type === Links)?.props.children}
           </TabList>
@@ -38,7 +38,7 @@ export const Template: React.FC = (props) => {
             mt="13px"
             height={1}
             borderTopRadius="md"
-            bg={mode("blue.500", "blue.200")}
+            bg={mode("brand.500", "blue.200")}
           />
         </Tabs>
       </HStack>
@@ -70,7 +70,7 @@ export const Template: React.FC = (props) => {
               marginStart="-3"
               width={1}
               borderTopRadius={{ base: "none", md: "md" }}
-              bg={mode("blue.500", "blue.200")}
+              bg={mode("brand.500", "brand.200")}
             />
           </Tabs>
           <Divider />

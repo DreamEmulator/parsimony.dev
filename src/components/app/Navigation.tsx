@@ -25,7 +25,10 @@ const Navigation: React.FC<Props> = ({}) => {
         </Navbar.Links>
         <Navbar.UserProfile>
           <ColorModeButton />
-          <Box display={{ base: "flex", md: "none", lg: "flex" }}>
+          <Box
+            pl={{ base: 4, md: 0 }}
+            display={{ base: "flex", md: "none", lg: "flex" }}
+          >
             <UserProfile
               name="Sebastiaan Hols"
               image="https://media-exp1.licdn.com/dms/image/C5603AQFBkup1Vmpgdw/profile-displayphoto-shrink_400_400/0/1584641650431?e=1639612800&v=beta&t=fpsXE-yero-QY2nepLFnI1QWAAkRuJ_TFkT6DpoHkrY"

@@ -75,7 +75,7 @@ export const Template: React.FC = (props) => {
           </Tabs>
           <Divider />
 
-          <Flex>
+          <Flex alignItems="center">
             {
               children.find((child) => child.type === UserProfile)?.props
                 .children

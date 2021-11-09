@@ -28,3 +28,16 @@ Steps:
   - Title: Deliver
     Body: Your team can take over. The code is tried and tested, well documented and
       easily extendable.
+Strategy:
+  Title: Strategy
+  Steps:
+    - Title: Discover
+      Body: Figure out which features you want to enhance your app with.
+    - Body: Write down the user stories to be delivered in sprints.
+      Title: Define
+    - Body: Test driven development is used to create maintainable features that take
+        your product to the next level.
+      Title: Develop
+    - Title: Deliver
+      Body: Your team can take over. The code is tried and tested, well documented and
+        easily extendable.

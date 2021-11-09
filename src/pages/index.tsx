@@ -6,7 +6,7 @@ import { Home } from "../utils/types/content/home";
 import { HeroBanner } from "../components/images/HeroBanner";
 import DefinitionTitle from "../components/titles/DefinitionTitle";
 import { StatCardsGroup } from "../components/cards/StatCardsGroup";
-import { Skills } from "../components/ctas/Skills";
+import { Skills } from "../groups/Skills";
 
 type Props = {
   data: Home;

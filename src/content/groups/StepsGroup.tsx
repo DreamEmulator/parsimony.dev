@@ -49,13 +49,12 @@ const StepsGroup: React.FC<StrategyProps> = ({ Title, Steps: StepsProps }) => {
   return (
     <Flex
       py="10"
-      pb="6rem"
-      px={{ base: "6", md: "8" }}
+      pb="12rem"
+      px={{ base: 6, md: 8 }}
       minH="400px"
-      justifyContent="center"
       background={useColorModeValue("brand.50", "brand.900")}
     >
-      <Box maxW="6xl">
+      <Box mx={{ base: 4, md: 10, lg: 20 }}>
         <Heading
           as="h3"
           size="2xl"

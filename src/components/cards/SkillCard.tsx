@@ -7,7 +7,7 @@ interface FeatureProps {
   children: React.ReactNode;
 }
 
-export const Feature = (props: FeatureProps) => {
+export const SkillCard = (props: FeatureProps) => {
   const { title, children, icon } = props;
   return (
     <Box>

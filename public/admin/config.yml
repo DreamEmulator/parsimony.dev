@@ -301,17 +301,17 @@ collections:
                         widget: string
                       - name: Body
                         widget: string
-              - name: Testimonials
-                widget: list
-                fields:
-                  - name: Name
-                    widget: string
-                  - name: Role
-                    widget: string
-                  - name: Image
-                    widget: string
-                  - name: Text
-                    widget: string
+          - name: Testimonials
+            widget: list
+            fields:
+              - name: Name
+                widget: string
+              - name: Role
+                widget: string
+              - name: Image
+                widget: string
+              - name: Text
+                widget: string
           - name: Strategy
             widget: object
             summary: "{{fields.title}}"

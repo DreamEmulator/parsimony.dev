@@ -14,7 +14,7 @@ type Props = {
 const Index: React.FC<Props> = ({
   data: {
     Banner: { Pitch, Slogan },
-    Steps,
+    Strategy: { Title: StrategyTitle, Steps },
     Definition: { Word, Definition },
     Values,
   },
@@ -28,7 +28,9 @@ const Index: React.FC<Props> = ({
         <DefinitionTitle Word={Word} Definition={Definition} />
       )}
       {Values && <StatCardsGroup {...Values} />}
-      {Steps && <StepsGroup steps={Steps} />}
+      {Steps && StrategyTitle && (
+        <StepsGroup Title={StrategyTitle} Steps={Steps} />
+      )}
     </>
   );
 };

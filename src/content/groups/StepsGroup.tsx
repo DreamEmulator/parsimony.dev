@@ -12,24 +12,17 @@ import {
 } from "@chakra-ui/react";
 import Steps from "../../components/steps/Steps";
 import Step from "../../components/steps/Step";
-import { Step as StepType } from "../../../src/utils/types/content/home";
+import { Strategy as StrategyProps } from "../../../src/utils/types/content/home";
 import StepContent from "../../components/steps/StepContent";
 import { UserProfile } from "../../components/images/UserProfile";
 import useSteps from "../../utils/hooks/useSteps";
 
-type Props = {
-  steps: StepType[];
-};
-const StepsGroup: React.FC<Props> = ({ steps }) => {
+const StepsGroup: React.FC<StrategyProps> = ({ Title, Steps: StepsProps }) => {
   const { nextStep, prevStep, reset, activeStep } = useSteps({
     initialStep: 0,
   });
 
-  const renderStep = (
-    { Title, Body }: StepType,
-    isFirst: boolean,
-    isLast: boolean
-  ) =>
+  const renderStep = ({ Title, Body }, isFirst: boolean, isLast: boolean) =>
     Title &&
     Body && (
       <Step key={Title} title={Title}>
@@ -67,16 +60,16 @@ const StepsGroup: React.FC<Props> = ({ steps }) => {
         fontFamily="mono"
         color={useColorModeValue("gray.200", "whiteAlpha.400")}
       >
-        Strategy
+        {Title}
       </Heading>
       <Steps activeStep={activeStep}>
-        {steps.map(
+        {StepsProps.map(
           (step, index) =>
             step !== null &&
-            renderStep(step, index === 0, index === steps.length - 1)
+            renderStep(step, index === 0, index === StepsProps.length - 1)
         )}
       </Steps>
-      <Stack display={activeStep === steps.length ? "flex" : "none"}>
+      <Stack display={activeStep === StepsProps.length ? "flex" : "none"}>
         <UserProfile
           name="Sebastiaan Hols"
           image="https://media-exp1.licdn.com/dms/image/C5603AQFBkup1Vmpgdw/profile-displayphoto-shrink_400_400/0/1584641650431?e=1639612800&v=beta&t=fpsXE-yero-QY2nepLFnI1QWAAkRuJ_TFkT6DpoHkrY"

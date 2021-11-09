@@ -51,6 +51,7 @@ const StepsGroup: React.FC<StrategyProps> = ({ Title, Steps: StepsProps }) => {
       py="10"
       px={{ base: "6", md: "8" }}
       minH="400px"
+      pb="6rem"
       background={useColorModeValue("brand.50", "brand.900")}
     >
       <Heading

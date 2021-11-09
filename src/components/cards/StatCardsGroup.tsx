@@ -20,12 +20,12 @@ export const StatCardsGroup: React.FC<ValuesProps> = ({ What, Why, How }) => (
   <Box
     as="section"
     position="relative"
-    maxW="7xl"
     mx="auto"
     px={{ base: "4", sm: "6" }}
-    background={useColorModeValue("brand.50", "brand.900")}
+    pb={{ base: "4", sm: "20" }}
+    bg={useColorModeValue("brand.50", "brand.900")}
   >
-    <Box maxW={{ base: "4xl", lg: "unset" }} mx="auto">
+    <Box maxW={{ base: "4xl", lg: "7xl" }} mx="auto">
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing="6">
         <StatCard title={What.Body} value={What.Title} icon={<DiAppstore />} />
         <StatCard title={Why.Body} value={Why.Title} icon={<AiFillFire />} />

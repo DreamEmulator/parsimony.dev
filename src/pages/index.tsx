@@ -6,7 +6,7 @@ import { Home } from "../utils/types/content/home";
 import { HeroBanner } from "../components/images/HeroBanner";
 import DefinitionTitle from "../components/titles/DefinitionTitle";
 import { StatCardsGroup } from "../components/cards/StatCardsGroup";
-import { Skills } from "../groups/Skills";
+import { SkillsGroup } from "../groups/SkillsGroup";
 
 type Props = {
   data: Home;
@@ -18,6 +18,7 @@ const Index: React.FC<Props> = ({
     Strategy: { Title: StrategyTitle, Steps },
     Definition: { Word, Definition },
     Values,
+    Skills,
   },
   data,
 }) => {
@@ -29,7 +30,7 @@ const Index: React.FC<Props> = ({
         <DefinitionTitle Word={Word} Definition={Definition} />
       )}
       {Values && <StatCardsGroup {...Values} />}
-      <Skills />
+      <SkillsGroup {...Skills} />
       {Steps && StrategyTitle && (
         <StepsGroup Title={StrategyTitle} Steps={Steps} />
       )}

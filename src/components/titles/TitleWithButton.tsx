@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Stack } from "@chakra-ui/react";
+import { Box, Heading, Stack, useColorModeValue } from "@chakra-ui/react";
 import { CTAButton } from "../buttons/CTAButton";
 import Link from "next/link";
 
@@ -22,6 +22,7 @@ const TitleWithButton: React.FC<Props> = ({ title, link, href }) => {
         lineHeight="short"
         fontWeight="extrabold"
         maxW={{ base: "unset", lg: "800px" }}
+        color={useColorModeValue("brand.800", "brand.200")}
       >
         {title}
       </Heading>

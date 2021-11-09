@@ -11,6 +11,8 @@ export interface Home {
   Banner: Banner;
   Values: Values;
   Definition: Definition;
+  Steps: Step[];
+  Skills: HomeSkills;
   Strategy: Strategy;
 }
 
@@ -24,20 +26,46 @@ export interface Definition {
   Definition: string;
 }
 
-export interface Strategy {
-  Title: string;
-  Steps: How[];
+export interface HomeSkills {
+  CTA: Cta;
+  Skills: SkillsSkills;
+  Testimonials: Testimonial[];
 }
 
-export interface How {
+export interface Cta {
+  Title: string;
+  Link: string;
+  URL: string;
+}
+
+export interface SkillsSkills {
+  First: Step;
+  Second: Step;
+  Third: Step;
+  Fourth: Step;
+}
+
+export interface Step {
   Title: string;
   Body: string;
 }
 
+export interface Testimonial {
+  Name: string;
+  Role: string;
+  Text: string;
+  Image: string;
+}
+
+export interface Strategy {
+  Title: string;
+  Steps: Step[];
+}
+
 export interface Values {
-  What: How;
-  Why: How;
-  How: How;
+  What: Step;
+  Why: Step;
+  How: Step;
 }
 
 // Converts JSON strings to/from your types
@@ -172,77 +200,83 @@ function transform(val: any, typ: any, getProps: any, key: any = ""): any {
 }
 
 function cast<T>(val: any, typ: any): T {
-  return transform(val, typ, jsonToJSProps);
+    return transform(val, typ, jsonToJSProps);
 }
 
 function uncast<T>(val: T, typ: any): any {
-  return transform(val, typ, jsToJSONProps);
+    return transform(val, typ, jsToJSONProps);
 }
 
 function a(typ: any) {
-  return { arrayItems: typ };
+    return {arrayItems: typ};
 }
 
 function u(...typs: any[]) {
-  return { unionMembers: typs };
+    return {unionMembers: typs};
 }
 
 function o(props: any[], additional: any) {
-  return { props, additional };
+    return {props, additional};
 }
 
 function m(additional: any) {
-  return { props: [], additional };
+    return {props: [], additional};
 }
 
 function r(name: string) {
-  return { ref: name };
+    return {ref: name};
 }
 
 const typeMap: any = {
-  Home: o(
-    [
-      { json: "Banner", js: "Banner", typ: r("Banner") },
-      { json: "Values", js: "Values", typ: r("Values") },
-      { json: "Definition", js: "Definition", typ: r("Definition") },
-      { json: "Strategy", js: "Strategy", typ: r("Strategy") },
-    ],
-    false
-  ),
-  Banner: o(
-    [
-      { json: "Slogan", js: "Slogan", typ: "" },
-      { json: "Pitch", js: "Pitch", typ: "" },
-    ],
-    false
-  ),
-  Definition: o(
-    [
-      { json: "Word", js: "Word", typ: "" },
-      { json: "Definition", js: "Definition", typ: "" },
-    ],
-    false
-  ),
-  Strategy: o(
-    [
-      { json: "Title", js: "Title", typ: "" },
-      { json: "Steps", js: "Steps", typ: a(r("How")) },
-    ],
-    false
-  ),
-  How: o(
-    [
-      { json: "Title", js: "Title", typ: "" },
-      { json: "Body", js: "Body", typ: "" },
-    ],
-    false
-  ),
-  Values: o(
-    [
-      { json: "What", js: "What", typ: r("How") },
-      { json: "Why", js: "Why", typ: r("How") },
-      { json: "How", js: "How", typ: r("How") },
-    ],
-    false
-  ),
+    "Home": o([
+        {json: "Banner", js: "Banner", typ: r("Banner")},
+        {json: "Values", js: "Values", typ: r("Values")},
+        {json: "Definition", js: "Definition", typ: r("Definition")},
+        {json: "Steps", js: "Steps", typ: a(r("Step"))},
+        {json: "Skills", js: "Skills", typ: r("HomeSkills")},
+        {json: "Strategy", js: "Strategy", typ: r("Strategy")},
+    ], false),
+    "Banner": o([
+        {json: "Slogan", js: "Slogan", typ: ""},
+        {json: "Pitch", js: "Pitch", typ: ""},
+    ], false),
+    "Definition": o([
+        {json: "Word", js: "Word", typ: ""},
+        {json: "Definition", js: "Definition", typ: ""},
+    ], false),
+    "HomeSkills": o([
+        {json: "CTA", js: "CTA", typ: r("Cta")},
+        {json: "Skills", js: "Skills", typ: r("SkillsSkills")},
+        {json: "Testimonials", js: "Testimonials", typ: a(r("Testimonial"))},
+    ], false),
+    "Cta": o([
+        {json: "Title", js: "Title", typ: ""},
+        {json: "Link", js: "Link", typ: ""},
+        {json: "URL", js: "URL", typ: ""},
+    ], false),
+    "SkillsSkills": o([
+        {json: "First", js: "First", typ: r("Step")},
+        {json: "Second", js: "Second", typ: r("Step")},
+        {json: "Third", js: "Third", typ: r("Step")},
+        {json: "Fourth", js: "Fourth", typ: r("Step")},
+    ], false),
+    "Step": o([
+        {json: "Title", js: "Title", typ: ""},
+        {json: "Body", js: "Body", typ: ""},
+    ], false),
+    "Testimonial": o([
+        {json: "Name", js: "Name", typ: ""},
+        {json: "Role", js: "Role", typ: ""},
+        {json: "Text", js: "Text", typ: ""},
+        {json: "Image", js: "Image", typ: ""},
+    ], false),
+    "Strategy": o([
+        {json: "Title", js: "Title", typ: ""},
+        {json: "Steps", js: "Steps", typ: a(r("Step"))},
+    ], false),
+    "Values": o([
+        {json: "What", js: "What", typ: r("Step")},
+        {json: "Why", js: "Why", typ: r("Step")},
+        {json: "How", js: "How", typ: r("Step")},
+    ], false),
 };

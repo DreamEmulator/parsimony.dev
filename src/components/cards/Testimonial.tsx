@@ -20,7 +20,7 @@ export const Testimonial = (props: TestimonialProps) => {
     <Box
       as="blockquote"
       rounded="2xl"
-      bg={mode("white", "gray.700")}
+      bg={mode("white", "brand.700")}
       color={mode("gray.800", "white")}
       shadow="lg"
       px="10"
@@ -34,7 +34,7 @@ export const Testimonial = (props: TestimonialProps) => {
           w="24"
           h="24"
           rounded="full"
-          color={mode("white", "gray.700")}
+          color={mode("white", "brand.700")}
           shadow="0 0 0 10px currentColor"
           src={image}
           alt={name}
@@ -50,7 +50,7 @@ export const Testimonial = (props: TestimonialProps) => {
           </Text>
           <Text
             mt="1"
-            color={mode("gray.600", "gray.400")}
+            color={mode("gray.600", "gray.100")}
             textTransform="uppercase"
             fontSize="xs"
             fontWeight="semibold"
@@ -60,7 +60,9 @@ export const Testimonial = (props: TestimonialProps) => {
           </Text>
         </Box>
       </Flex>
-      <Text color={mode("gray.600", "gray.400")}>{children}</Text>
+      <Text color={mode("gray.600", "gray.50")} fontFamily="mono">
+        {children}
+      </Text>
     </Box>
   );
 };

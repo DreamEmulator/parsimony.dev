@@ -172,59 +172,77 @@ function transform(val: any, typ: any, getProps: any, key: any = ""): any {
 }
 
 function cast<T>(val: any, typ: any): T {
-    return transform(val, typ, jsonToJSProps);
+  return transform(val, typ, jsonToJSProps);
 }
 
 function uncast<T>(val: T, typ: any): any {
-    return transform(val, typ, jsToJSONProps);
+  return transform(val, typ, jsToJSONProps);
 }
 
 function a(typ: any) {
-    return {arrayItems: typ};
+  return { arrayItems: typ };
 }
 
 function u(...typs: any[]) {
-    return {unionMembers: typs};
+  return { unionMembers: typs };
 }
 
 function o(props: any[], additional: any) {
-    return {props, additional};
+  return { props, additional };
 }
 
 function m(additional: any) {
-    return {props: [], additional};
+  return { props: [], additional };
 }
 
 function r(name: string) {
-    return {ref: name};
+  return { ref: name };
 }
 
 const typeMap: any = {
-    "Home": o([
-        {json: "Banner", js: "Banner", typ: r("Banner")},
-        {json: "Values", js: "Values", typ: r("Values")},
-        {json: "Definition", js: "Definition", typ: r("Definition")},
-        {json: "Strategy", js: "Strategy", typ: r("Strategy")},
-    ], false),
-    "Banner": o([
-        {json: "Slogan", js: "Slogan", typ: ""},
-        {json: "Pitch", js: "Pitch", typ: ""},
-    ], false),
-    "Definition": o([
-        {json: "Word", js: "Word", typ: ""},
-        {json: "Definition", js: "Definition", typ: ""},
-    ], false),
-    "Strategy": o([
-        {json: "Title", js: "Title", typ: ""},
-        {json: "Steps", js: "Steps", typ: a(r("How"))},
-    ], false),
-    "How": o([
-        {json: "Title", js: "Title", typ: ""},
-        {json: "Body", js: "Body", typ: ""},
-    ], false),
-    "Values": o([
-        {json: "What", js: "What", typ: r("How")},
-        {json: "Why", js: "Why", typ: r("How")},
-        {json: "How", js: "How", typ: r("How")},
-    ], false),
+  Home: o(
+    [
+      { json: "Banner", js: "Banner", typ: r("Banner") },
+      { json: "Values", js: "Values", typ: r("Values") },
+      { json: "Definition", js: "Definition", typ: r("Definition") },
+      { json: "Strategy", js: "Strategy", typ: r("Strategy") },
+    ],
+    false
+  ),
+  Banner: o(
+    [
+      { json: "Slogan", js: "Slogan", typ: "" },
+      { json: "Pitch", js: "Pitch", typ: "" },
+    ],
+    false
+  ),
+  Definition: o(
+    [
+      { json: "Word", js: "Word", typ: "" },
+      { json: "Definition", js: "Definition", typ: "" },
+    ],
+    false
+  ),
+  Strategy: o(
+    [
+      { json: "Title", js: "Title", typ: "" },
+      { json: "Steps", js: "Steps", typ: a(r("How")) },
+    ],
+    false
+  ),
+  How: o(
+    [
+      { json: "Title", js: "Title", typ: "" },
+      { json: "Body", js: "Body", typ: "" },
+    ],
+    false
+  ),
+  Values: o(
+    [
+      { json: "What", js: "What", typ: r("How") },
+      { json: "Why", js: "Why", typ: r("How") },
+      { json: "How", js: "How", typ: r("How") },
+    ],
+    false
+  ),
 };

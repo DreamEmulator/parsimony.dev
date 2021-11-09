@@ -17,6 +17,50 @@ Definition:
   Word: Parsimony
   Definition: The scientific principle that things should be connected and behave
     in the simplest and most efficient way.
+Steps:
+  - Title: Discover
+    Body: Figure out which features you want to enhance your app with.
+  - Title: Define
+    Body: Define testable the user stories that can be solved in sprints.
+  - Title: Develop
+    Body: Test driven development is used to create maintainable features that take
+      your product to the next level.
+  - Title: Deliver
+    Body: Your team can take over. The code is tried and tested, well documented and
+      easily extendable.
+Skills:
+  CTA:
+    Title: Skills and services
+    Link: Toolbox
+    URL: /toolbox
+  Skills:
+    First:
+      Title: React Native Apps
+      Body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+    Second:
+      Title: Native modules
+      Body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+    Third:
+      Title: NextJS
+      Body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+    Fourth:
+      Title: Java
+      Body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+  Testimonials:
+    - Name: John Appleseed
+      Role: CEO
+      Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      Image: unsplash
+    - Name: Jane Appleseed
+      Role: CTO
+      Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      Image: unsplash
 Strategy:
   Title: Strategy
   Steps:

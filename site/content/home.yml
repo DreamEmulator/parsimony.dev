@@ -30,24 +30,24 @@ Steps:
       easily extendable.
 Skills:
   CTA:
-    Title: Skills and services
+    Title: Stacks
     Link: Toolbox
     URL: /toolbox
   Skills:
     First:
-      Title: React Native Apps
+      Title: Typescript & React (Native)
       Body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
     Second:
-      Title: Native modules
+      Title: Swift & iOS
       Body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
     Third:
-      Title: NextJS
+      Title: Android & Java
       Body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
     Fourth:
-      Title: Java
+      Title: PHP & Laravel
       Body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
   Testimonials:

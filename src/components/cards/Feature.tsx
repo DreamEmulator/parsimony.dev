@@ -28,6 +28,7 @@ export const Feature = (props: FeatureProps) => {
           lineHeight="tall"
           color={useColorModeValue("brand.800", "brand.200")}
           fontWeight="regular"
+          fontFamily="mono"
         >
           {children}
         </Text>

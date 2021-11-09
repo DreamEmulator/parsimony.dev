@@ -20,12 +20,11 @@ const Footer: React.FC<Props> = ({}) => (
     as="footer"
     role="contentinfo"
     mx="auto"
-    maxW="7xl"
     py="12"
     px={{ base: "4", md: "8" }}
     background={useColorModeValue("gray.100", "brand.700")}
   >
-    <Stack>
+    <Stack maxW="4xl" mx="auto">
       <Stack
         direction={{ base: "column-reverse", sm: "row" }}
         spacing="4"

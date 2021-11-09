@@ -47,45 +47,48 @@ const StepsGroup: React.FC<StrategyProps> = ({ Title, Steps: StepsProps }) => {
       </Step>
     );
   return (
-    <Box
+    <Flex
       py="10"
+      pb="6rem"
       px={{ base: "6", md: "8" }}
       minH="400px"
-      pb="6rem"
+      justifyContent="center"
       background={useColorModeValue("brand.50", "brand.900")}
     >
-      <Heading
-        as="h3"
-        size="2xl"
-        py="8"
-        fontFamily="mono"
-        color={useColorModeValue("gray.200", "whiteAlpha.400")}
-      >
-        {Title}
-      </Heading>
-      <Steps activeStep={activeStep}>
-        {StepsProps.map(
-          (step, index) =>
-            step !== null &&
-            renderStep(step, index === 0, index === StepsProps.length - 1)
-        )}
-      </Steps>
-      <Stack display={activeStep === StepsProps.length ? "flex" : "none"}>
-        <UserProfile
-          name="Sebastiaan Hols"
-          image="https://media-exp1.licdn.com/dms/image/C5603AQFBkup1Vmpgdw/profile-displayphoto-shrink_400_400/0/1584641650431?e=1639612800&v=beta&t=fpsXE-yero-QY2nepLFnI1QWAAkRuJ_TFkT6DpoHkrY"
-          email="s.hols@icloud.com"
-        />
-        <HStack mt="10" spacing="4" shouldWrapChildren>
-          <Button size="sm" onClick={reset}>
-            Back
-          </Button>
-          <Button size="sm" variant="outline" verticalAlign="baseline">
-            Get in touch
-          </Button>
-        </HStack>
-      </Stack>
-    </Box>
+      <Box maxW="6xl">
+        <Heading
+          as="h3"
+          size="2xl"
+          py="8"
+          fontFamily="mono"
+          color={useColorModeValue("gray.200", "whiteAlpha.400")}
+        >
+          {Title}
+        </Heading>
+        <Steps activeStep={activeStep}>
+          {StepsProps.map(
+            (step, index) =>
+              step !== null &&
+              renderStep(step, index === 0, index === StepsProps.length - 1)
+          )}
+        </Steps>
+        <Stack display={activeStep === StepsProps.length ? "flex" : "none"}>
+          <UserProfile
+            name="Sebastiaan Hols"
+            image="https://media-exp1.licdn.com/dms/image/C5603AQFBkup1Vmpgdw/profile-displayphoto-shrink_400_400/0/1584641650431?e=1639612800&v=beta&t=fpsXE-yero-QY2nepLFnI1QWAAkRuJ_TFkT6DpoHkrY"
+            email="s.hols@icloud.com"
+          />
+          <HStack mt="10" spacing="4" shouldWrapChildren>
+            <Button size="sm" onClick={reset}>
+              Back
+            </Button>
+            <Button size="sm" variant="outline" verticalAlign="baseline">
+              Get in touch
+            </Button>
+          </HStack>
+        </Stack>
+      </Box>
+    </Flex>
   );
 };
 

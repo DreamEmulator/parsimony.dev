@@ -66,7 +66,7 @@ export const SkillsGroup: React.FC<HomeSkills> = ({
           </SimpleGrid>
         </Box>
       </Box>
-      <Box mt="-24" bg={useColorModeValue("brand.800", "brand.800")}>
+      <Box mt="-24" bg={useColorModeValue("brand.100", "brand.800")}>
         <Box
           maxW={{ base: "xl", md: "7xl" }}
           mx="auto"

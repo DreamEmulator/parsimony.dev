@@ -60,7 +60,7 @@ export const Testimonial = (props: TestimonialProps) => {
           </Text>
         </Box>
       </Flex>
-      <Text color={mode("gray.600", "gray.50")} fontFamily="mono">
+      <Text fontSize="xl" color={mode("gray.600", "gray.50")}>
         {children}
       </Text>
     </Box>

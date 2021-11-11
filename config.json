@@ -1,14 +1,10 @@
 {
-  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Next.js Netlify Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "base_url": "https://parsimony.dev",
+  "site_title": "Parsimony Development",
+  "site_description": "Clean, clear and concise code.",
   "site_keywords": [
-    {
-      "keyword": "Next.js"
-    },
-    {
-      "keyword": "Netlify"
-    },
+    "Developer",
+    "Agile",
     {
       "keyword": "React"
     }

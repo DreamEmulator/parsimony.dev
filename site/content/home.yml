@@ -36,21 +36,20 @@ Skills:
     URL: /toolbox
   Skills:
     First:
-      Title: Typescript & React (Native)
+      Title: React
       Body: Quick and easy to work with, the component system and functional nature of
-        React makes for a great tool to develop websites and apps.
+        React makes for a great tool apps.
     Second:
-      Title: Swift & iOS
+      Title: Swift UI on iOS
       Body: When you are looking to achieve the highest level of user experience and
         integration in Apple's rich ecosystem.
     Third:
-      Title: Android & Java
+      Title: JetPack on Andoid
       Body: The world's most profilific OOP language backs the majority of the world's
         smart phones.
     Fourth:
-      Title: PHP & Laravel
-      Body: The language that powers ~80% of the web combinee with a powerful
-        framework that allows for quick and concise code.
+      Title: React Native
+      Body: Combine React's easy composition with native performance.
 Testimonials:
   - Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.

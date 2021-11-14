@@ -40,13 +40,12 @@ Skills:
       Body: Quick and easy to work with, the component system and functional nature of
         React makes for a great tool apps.
     Second:
-      Title: Swift UI on iOS
+      Title: iOS Swift UI
       Body: When you are looking to achieve the highest level of user experience and
         integration in Apple's rich ecosystem.
     Third:
-      Title: JetPack on Andoid
-      Body: The world's most profilific OOP language backs the majority of the world's
-        smart phones.
+      Title: Android Jetpack
+      Body: Fast and functional, Kotlin and Jetpack boost Android development.
     Fourth:
       Title: React Native
       Body: Combine React's easy composition with native performance.

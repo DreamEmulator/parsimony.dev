@@ -1,22 +1,26 @@
 Banner:
   Slogan: Scale up your stacks
   Pitch: Developing custom code and components for (web) apps.
+  Show: true
 Values:
   What:
-    Title: Creativity
-    Body: Discovering, defining and delivering the best components and code drives
-      creativity.
+    Title: Creative
+    Body: Less is more when it comes to code. Figuring out the best solutions with
+      the cleanest code is where creativity comes in.
   Why:
-    Title: Passion
-    Body: Crafting clean code that lasts is a passion at Parsimony.
+    Title: Passionate
+    Body: "Building the best digital products that our clients are passionate about
+      gets us excited. "
   How:
     Body: Developing in tandem with a team or delivering a single product from start
       to finish.
-    Title: Dedication
+    Title: Dedicated
+  Show: true
 Definition:
   Word: Parsimony
   Definition: The scientific principle that things should be connected and behave
     in the simplest and most efficient way.
+  Show: true
 Steps:
   - Title: Discover
     Body: Figure out which features you want to enhance your app with.
@@ -35,32 +39,33 @@ Skills:
     URL: /toolbox
   Skills:
     First:
-      Title: Typescript & React (Native)
-      Body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+      Title: React
+      Body: Quick and easy to work with, the component system and functional nature of
+        React makes for a great tool apps.
     Second:
-      Title: Swift & iOS
-      Body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+      Title: iOS Swift UI
+      Body: When you are looking to achieve the highest level of user experience and
+        integration in Apple's rich ecosystem.
     Third:
-      Title: Android & Java
-      Body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+      Title: Android Jetpack
+      Body: Fast and functional, Kotlin and Jetpack boost Android development.
     Fourth:
-      Title: PHP & Laravel
-      Body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+      Title: React Native
+      Body: Combine React's easy composition with native performance.
+  Show: true
 Testimonials:
   - Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
     Image: https://media-exp1.licdn.com/dms/image/C5603AQH1elLb4thgmQ/profile-displayphoto-shrink_400_400/0/1517755562287?e=1642032000&v=beta&t=R_gOXXL0-uXG9tSoWXJDLZQeOdM7YK55JVcYbuGibzM
     Role: Manager Strategic Partnerships at ABN AMRO Bank N.V.
     Name: Clarissa Peach
+    Show: false
   - Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
     Image: https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80
     Name: John Appleseed
     Role: CEO
+    Show: false
 Strategy:
   Title: Strategy
   Steps:
@@ -74,3 +79,4 @@ Strategy:
     - Title: Deliver
       Body: Your team can take over. The code is tried and tested, well documented and
         easily extendable.
+  Show: true

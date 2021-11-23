@@ -26,9 +26,9 @@ const TitleWithButton: React.FC<Props> = ({ title, link, href }) => {
       >
         {title}
       </Heading>
-      <Link href={href}>
-        <CTAButton w={{ base: "full", md: "auto" }}>{link}</CTAButton>
-      </Link>
+      {/*<Link href={href}>*/}
+      <CTAButton w={{ base: "full", md: "auto" }}>{link}</CTAButton>
+      {/*</Link>*/}
     </Stack>
   );
 };

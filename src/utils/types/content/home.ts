@@ -20,16 +20,19 @@ export interface Home {
 export interface Banner {
   Slogan: string;
   Pitch: string;
+  Show: boolean;
 }
 
 export interface Definition {
   Word: string;
   Definition: string;
+  Show: boolean;
 }
 
 export interface HomeSkills {
   CTA: Cta;
   Skills: SkillsSkills;
+  Show: boolean;
 }
 
 export interface Cta {
@@ -46,26 +49,29 @@ export interface SkillsSkills {
 }
 
 export interface Step {
-    Title: string;
-    Body: string;
+  Title: string;
+  Body: string;
 }
 
 export interface Strategy {
-    Title: string;
-    Steps: Step[];
+  Title: string;
+  Steps: Step[];
+  Show: boolean;
 }
 
 export interface Testimonial {
-    Text: string;
-    Image: string;
-    Role: string;
-    Name: string;
+  Text: string;
+  Image: string;
+  Role: string;
+  Name: string;
+  Show: boolean;
 }
 
 export interface Values {
-    What: Step;
-    Why: Step;
-    How: Step;
+  What: Step;
+  Why: Step;
+  How: Step;
+  Show: boolean;
 }
 
 // Converts JSON strings to/from your types
@@ -240,14 +246,17 @@ const typeMap: any = {
     "Banner": o([
         {json: "Slogan", js: "Slogan", typ: ""},
         {json: "Pitch", js: "Pitch", typ: ""},
+        {json: "Show", js: "Show", typ: true},
     ], false),
     "Definition": o([
         {json: "Word", js: "Word", typ: ""},
         {json: "Definition", js: "Definition", typ: ""},
+        {json: "Show", js: "Show", typ: true},
     ], false),
     "HomeSkills": o([
         {json: "CTA", js: "CTA", typ: r("Cta")},
         {json: "Skills", js: "Skills", typ: r("SkillsSkills")},
+        {json: "Show", js: "Show", typ: true},
     ], false),
     "Cta": o([
         {json: "Title", js: "Title", typ: ""},
@@ -267,16 +276,19 @@ const typeMap: any = {
     "Strategy": o([
         {json: "Title", js: "Title", typ: ""},
         {json: "Steps", js: "Steps", typ: a(r("Step"))},
+        {json: "Show", js: "Show", typ: true},
     ], false),
     "Testimonial": o([
         {json: "Text", js: "Text", typ: ""},
         {json: "Image", js: "Image", typ: ""},
         {json: "Role", js: "Role", typ: ""},
         {json: "Name", js: "Name", typ: ""},
+        {json: "Show", js: "Show", typ: true},
     ], false),
     "Values": o([
         {json: "What", js: "What", typ: r("Step")},
         {json: "Why", js: "Why", typ: r("Step")},
         {json: "How", js: "How", typ: r("Step")},
+        {json: "Show", js: "Show", typ: true},
     ], false),
 };

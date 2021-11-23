@@ -14,29 +14,18 @@ type Props = {
 };
 
 const Index: React.FC<Props> = ({
-  data: {
-    Banner: { Pitch, Slogan },
-    Strategy: { Title: StrategyTitle, Steps },
-    Definition: { Word, Definition },
-    Values,
-    Skills,
-    Testimonials,
-  },
+  data: { Banner, Strategy, Definition, Values, Skills, Testimonials },
   data,
 }) => {
   console.log(data);
   return (
     <>
-      {Slogan && Pitch && <HeroBanner Pitch={Pitch} Slogan={Slogan} />}
-      {Word && Definition && (
-        <DefinitionTitle Word={Word} Definition={Definition} />
-      )}
-      {Values && <StatCardsGroup {...Values} />}
+      <HeroBanner {...Banner} />
+      <DefinitionTitle {...Definition} />
+      <StatCardsGroup {...Values} />
       <SkillsGroup {...Skills} />
-      {Steps && StrategyTitle && (
-        <StepsGroup Title={StrategyTitle} Steps={Steps} />
-      )}
-      {Testimonials && <TestimonialsGroup Testimonials={Testimonials} />}
+      <StepsGroup {...Strategy} />
+      <TestimonialsGroup {...Testimonials} />
     </>
   );
 };

@@ -29,6 +29,7 @@ export const Template: React.FC = (props) => {
       borderBottomWidth={mode("0", "1px")}
     >
       {children.find((child) => child.type === Brand)?.props.children}
+      <Spacer display={{ base: "none", xl: "flex" }} />
       <HStack display={{ base: "none", md: "flex" }} marginStart={4}>
         <Tabs colorScheme="brand" variant="unstyled" isFitted>
           <TabList>
@@ -42,7 +43,7 @@ export const Template: React.FC = (props) => {
           />
         </Tabs>
       </HStack>
-      <Spacer flex={{ base: 0.95, lg: 0.8 }} />
+      <Spacer />
       <HStack display={{ base: "none", md: "flex" }} spacing={3}>
         {children.find((child) => child.type === UserProfile)?.props.children}
       </HStack>

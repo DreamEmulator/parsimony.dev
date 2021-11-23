@@ -177,16 +177,20 @@ collections:
             widget: object
             summary: "{{fields.slogan}} - {{fields.pitch}}"
             fields:
-            - name: Slogan
-              widget: string
-              required: false
-            - name: Pitch
-              widget: string
-              required: false
-            - name: Link
-              widget: object
-              fields:
-              - name: Title
+              - name: Show
+                widget: boolean
+                required: true
+                default: true
+              - name: Slogan
+                widget: string
+                required: false
+              - name: Pitch
+                widget: string
+                required: false
+              - name: Link
+                widget: object
+                fields:
+                  - name: Title
                 widget: string
                 required: false
               - name: URL
@@ -195,6 +199,10 @@ collections:
           - name: Values
             widget: object
             fields:
+              - name: Show
+                widget: boolean
+                required: true
+                default: true
               - name: What
                 widget: object
                 fields:
@@ -252,6 +260,10 @@ collections:
           - name: Definition
             widget: object
             fields:
+              - name: Show
+                widget: boolean
+                required: true
+                default: true
               - name: Word
                 widget: string
                 required: false
@@ -261,6 +273,10 @@ collections:
           - name: Skills
             widget: object
             fields:
+              - name: Show
+                widget: boolean
+                required: true
+                default: true
               - name: CTA
                 widget: object
                 fields:
@@ -304,6 +320,10 @@ collections:
           - name: Testimonials
             widget: list
             fields:
+              - name: Show
+                widget: boolean
+                required: true
+                default: true
               - name: Name
                 widget: string
               - name: Role
@@ -316,6 +336,10 @@ collections:
             widget: object
             summary: "{{fields.title}}"
             fields:
+              - name: Show
+                widget: boolean
+                required: true
+                default: true
               - name: Title
                 widget: string
                 required: false

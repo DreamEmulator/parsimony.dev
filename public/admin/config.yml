@@ -191,8 +191,8 @@ collections:
                 widget: object
                 fields:
                   - name: Title
-                widget: string
-                required: false
+                    widget: string
+                    required: false
               - name: URL
                 widget: string
                 required: false

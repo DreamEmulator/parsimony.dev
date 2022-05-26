@@ -21,8 +21,7 @@ export const SearchField = (props: InputGroupProps) => {
           rounded="base"
           fontSize="xs"
           borderWidth="1px"
-          w="5"
-          h="5"
+          size="5"
           bg={mode("brand.100", "brand.800")}
           color="brand.500"
         >
